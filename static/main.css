@@ -1,0 +1,56 @@
+*{
+	font-family: sans-serif;
+	/*outline: 1px solid black;*/
+
+}
+
+header{
+	min-height: 100vh;
+}
+
+nav{
+	display: flex;
+	color: dodgerblue;
+	justify-content: space-between;
+}
+
+.results{
+ display: flex;
+}
+
+.result{
+	width: 30%;
+}
+
+.nav-bar{
+	list-style: none;
+
+}
+.nav-bar-item{
+	display: inline;
+	padding: 20px
+}
+
+.form{
+	
+	width: 60%;
+	margin:auto;
+}
+.myfield{
+	padding: 20px;
+	border:none;
+	border-bottom: 1px solid dodgerblue;
+	width:100%;
+
+}
+
+.mybtn{
+	border:none;
+	padding: 20px;
+	background-color: dodgerblue;
+	cursor: pointer;
+	outline: none;
+	color: white;
+	border-radius: 30px;
+	margin-top: 30px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lyric Zero</title>
+	<link rel="stylesheet" href="../static/main.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<h1 class="logo">Lyric Zero</h1>
+			<ul class="nav-bar">
+				<li class="nav-bar-item"><a href="/">Search Music</a></li>
+				<li class="nav-bar-item"><a href="/records">History</a></li>
+			</ul>
+		</nav>
+
+
+
+		<div class="form">
+			<form action="/" method="post">
+				<input type="text" name="artist" id="" class="myfield" placeholder="Search For Song">
+				<input type="submit" value="Search" class="mybtn">
+			</form>
+		</div>
+
+		<div class="results">
+
+			{% for s in song_data.hits%}
+				<div class="result">
+					<h3 class="result-title">{{s.result.full_title}}</h3>
+					<img src="{{s.result.header_image_url}}" alt="" width="300">
+					<br>
+				</div>
+			{% endfor%}
+			
+		</div>
+	</header>
+</body>
+</html>
