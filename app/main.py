@@ -18,6 +18,8 @@ headers={
 
 app=Flask(__name__)
 
+app.debug=True
+
 @app.route('/',methods=['GET','POST'])
 def index():
 
@@ -39,7 +41,7 @@ def index():
 
     	song_data=res_data['response']
 
-    	
+    	# print(song_data)
 
 
     	# return song_data

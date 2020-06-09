@@ -1,75 +1,83 @@
-*{
-	font-family: sans-serif;
-	/*outline: 1px solid black;*/
-	padding: 0;
-	margin: 0;
-
+* {
+  font-family: sans-serif;
+  /*outline: 1px solid black;*/
+  padding: 0;
+  margin: 0;
 }
-a{
-	text-decoration: none;
-}
-
-header{
-	
+a {
+  text-decoration: none;
 }
 
-nav{
-	display: flex;
-	color: dodgerblue;
-	justify-content: space-between;
-	box-shadow: 5px 5px 5px black;
-	z-index: 2;
-	padding: 2%;
-
+header {
 }
 
-
-.nav-bar a{
-	color: dodgerblue;
-}
-.nav-bar{
-	list-style: none;
-
-}
-.nav-bar-item{
-	display: inline;
-	padding: 20px
-}
-
-.form{
-	
-	width: 80%;
-	margin:auto;
-}
-.myfield{
-	padding: 20px;
-	border:none;
-	border-bottom: 1px solid dodgerblue;
-	width:100%;
-
+nav {
+  display: flex;
+  color: dodgerblue;
+  justify-content: space-evenly;
+  box-shadow: 5px 5px 5px black;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  position: fixed;
+  padding: 2%;
+  width: 100%;
+  background-color: white;
 }
 
-.mybtn{
-	border:none;
-	padding: 20px;
-	background-color: dodgerblue;
-	cursor: pointer;
-	outline: none;
-	color: white;
-	border-radius: 30px;
-	margin-top: 30px;
+.nav-bar a {
+  color: dodgerblue;
+}
+.nav-bar {
+  list-style: none;
+}
+.nav-bar-item {
+  display: inline;
+  padding: 20px;
 }
 
-.results{
- display: flex;
- width: 80%;
- margin: auto;
- flex-wrap: wrap;
+.form {
+  margin-top: 60px;
+  width: 80%;
+
+  height: 5%;
+  text-align: center;
+  padding: 5%;
+  /* margin: auto; */
+}
+.myfield {
+  padding: 20px;
+  border: none;
+  border-bottom: 1px solid dodgerblue;
+  width: 100%;
+  outline: none;
+  text-align: center;
+  font-size: 2rem;
 }
 
-.result{
-	width: 200px;
-	margin-left: 20px;
-	padding: 20px;
-	
+.mybtn {
+  border: none;
+  padding: 20px;
+  background-color: dodgerblue;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  margin-top: 30px;
+}
+
+.results {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.result {
+  width: 200px;
+  margin-left: 20px;
+  padding: 20px;
+  height: 300px;
 }

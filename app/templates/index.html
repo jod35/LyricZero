@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Lyric Zero</title>
-	<link rel="stylesheet" href="../static/main.css">
-</head>
-<body>
-	<header>
-		<nav>
-			<h1 class="logo">Lyric Zero</h1>
-			<ul class="nav-bar">
-				<li class="nav-bar-item"><a href="/">Search Music</a></li>
-				<li class="nav-bar-item"><a href="/records">History</a></li>
-			</ul>
-		</nav>
-		<br>
-		<br>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lyric Zero</title>
+    <link rel="stylesheet" href="../static/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/"><h1 class="logo">Lyric Zero</h1></a>
+        <ul class="nav-bar">
+          <li class="nav-bar-item"><a href="/">Search Music</a></li>
+          <li class="nav-bar-item"><a href="/records">History</a></li>
+        </ul>
+      </nav>
 
-
-
-		<div class="form">
-			<form action="/" method="post">
-				<input type="text" name="artist" id="" class="myfield" placeholder="Search For Song">
-				<input type="submit" value="Search" class="mybtn">
-			</form>
-		</div>
-	</header>
-	<div class="results">
-
-			{% for s in song_data.hits%}
-				<div class="result">
-					<img src="{{s.result.header_image_url}}" alt="" width="200">
-					<h3 class="result-title">{{s.result.full_title}}</h3>
-					
-					
-				</div>
-			{% endfor%}
-			
-		</div>
-</body>
+      <div class="form">
+        <form action="/" method="post">
+          <input
+            type="text"
+            name="artist"
+            id=""
+            class="myfield"
+            placeholder="Search For Song"
+          />
+          <input type="submit" value="Search" class="mybtn" />
+        </form>
+      </div>
+    </header>
+    <div class="results">
+      {% for s in song_data.hits%}
+      <div class="result">
+        <img src="{{s.result.header_image_url}}" alt="" width="200" />
+        <h3 class="result-title">{{s.result.title}}</h3>
+        <p>by {{s.result.primary_artist.name}}</p>
+        <br /><br />
+        <a href="{{s.result.url}}" class="mybtn">Lyrics</a>
+      </div>
+      {% endfor%}
+    </div>
+    <script src="../static/index.js"></script>
+  </body>
 </html>
