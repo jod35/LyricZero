@@ -5,7 +5,7 @@ import os
 
 
 
-API_KEY=os.environ.get('API_KEY')
+API_KEY='00d077979fmsh387d90cf6e84a47p1c658fjsn75203996af2d'
 
 url='https://genius.p.rapidapi.com/search'
 
