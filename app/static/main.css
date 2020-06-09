@@ -1,27 +1,32 @@
 *{
 	font-family: sans-serif;
 	/*outline: 1px solid black;*/
+	padding: 0;
+	margin: 0;
 
+}
+a{
+	text-decoration: none;
 }
 
 header{
-	min-height: 100vh;
+	
 }
 
 nav{
 	display: flex;
 	color: dodgerblue;
 	justify-content: space-between;
+	box-shadow: 5px 5px 5px black;
+	z-index: 2;
+	padding: 2%;
+
 }
 
-.results{
- display: flex;
-}
 
-.result{
-	width: 30%;
+.nav-bar a{
+	color: dodgerblue;
 }
-
 .nav-bar{
 	list-style: none;
 
@@ -33,7 +38,7 @@ nav{
 
 .form{
 	
-	width: 60%;
+	width: 80%;
 	margin:auto;
 }
 .myfield{
@@ -53,4 +58,18 @@ nav{
 	color: white;
 	border-radius: 30px;
 	margin-top: 30px;
+}
+
+.results{
+ display: flex;
+ width: 80%;
+ margin: auto;
+ flex-wrap: wrap;
+}
+
+.result{
+	width: 200px;
+	margin-left: 20px;
+	padding: 20px;
+	
 }

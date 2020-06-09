@@ -14,6 +14,8 @@
 				<li class="nav-bar-item"><a href="/records">History</a></li>
 			</ul>
 		</nav>
+		<br>
+		<br>
 
 
 
@@ -23,18 +25,18 @@
 				<input type="submit" value="Search" class="mybtn">
 			</form>
 		</div>
-
-		<div class="results">
+	</header>
+	<div class="results">
 
 			{% for s in song_data.hits%}
 				<div class="result">
+					<img src="{{s.result.header_image_url}}" alt="" width="200">
 					<h3 class="result-title">{{s.result.full_title}}</h3>
-					<img src="{{s.result.header_image_url}}" alt="" width="300">
-					<br>
+					
+					
 				</div>
 			{% endfor%}
 			
 		</div>
-	</header>
 </body>
 </html>
