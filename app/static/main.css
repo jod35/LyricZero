@@ -66,6 +66,7 @@ header {
 .open-btn {
   color: dodgerblue;
   display: none;
+  font-size: 30px;
 }
 .form {
   margin-top: 100px;
@@ -99,9 +100,13 @@ header {
 .text-center {
   text-align: center;
 }
+.overlay {
+  display: none;
+}
 
 .results {
   color: dodgerblue;
+  min-height: 100vh;
 }
 .res-list {
   width: 95%;
@@ -132,27 +137,15 @@ footer {
     box-shadow: none;
   }
   .nav-bar {
-    display: none;
+    /* display: none; */
   }
   .mobile-nav {
     display: inline;
     padding: 20px;
     margin-right: 50px;
   }
-  .mobile-div {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: dodgerblue;
-    display: none;
-  }
-  .mobile-div a {
-    text-align: center;
-    padding: 20px;
-    color: white;
+  .overlay {
+    display: block;
   }
   .form {
     margin-top: 200px;
