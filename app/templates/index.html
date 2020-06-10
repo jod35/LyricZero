@@ -2,43 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Lyric Zero</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/main.css" />
+    <title>Lyric Zero</title>
   </head>
   <body>
     <header>
-      <nav>
-        <a href="/"><h1 class="logo">Lyric Zero</h1></a>
-        <ul class="nav-bar">
-          <li class="nav-bar-item"><a href="/">Search Music</a></li>
-          <li class="nav-bar-item"><a href="/records">History</a></li>
-        </ul>
-      </nav>
-
-      <div class="form">
-        <form action="/" method="post">
-          <input
-            type="text"
-            name="artist"
-            id=""
-            class="myfield"
-            placeholder="Search For Song"
-          />
-          <input type="submit" value="Search" class="mybtn" />
-        </form>
-      </div>
+      <h3 class="logo">Lyric Zero</h3>
+      <ul class="nav-bar">
+        <li class="nav-item"><a href="" class="nav-bar-item">Search</a></li>
+        <li class="nav-item">
+          <a href="" class="nav-bar-item">Search History</a>
+        </li>
+      </ul>
+      <span class="open-btn">
+        &#9776; open
+      </span>
     </header>
-    <div class="results">
-      {% for s in song_data.hits%}
-      <div class="result">
-        <img src="{{s.result.header_image_url}}" alt="" width="200" />
-        <h3 class="result-title">{{s.result.title}}</h3>
-        <p>by {{s.result.primary_artist.name}}</p>
-        <br /><br />
-        <a href="{{s.result.url}}" class="mybtn">Lyrics</a>
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
+        >&times;</a
+      >
+      <div class="overlay-content">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contacts</a>
       </div>
-      {% endfor%}
     </div>
-    <script src="../static/index.js"></script>
+    <div class="form">
+      <form action="/" method="post">
+        <input type="text" name="artist" id="" class="myfield" />
+        <input type="submit" value="Search" class="mybtn" />
+      </form>
+    </div>
+
+    <div class="results">
+      <div class="res-list">
+        {% for res in song_data.hits %}
+        <div class="res-box">
+          <img src="{{res.result.header_image_url}}" alt="" width="300" />
+          <p class="black-text">
+            {{res.result.title}}
+          </p>
+          <p>By {{res.result.primary_artist.name}}</p>
+          <a href="{{res.result.url}}" class="res-btn">Lyrics</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <footer>
+      <h3 class="text-center">&copy; Ssali Jonathan 2020</h3>
+    </footer>
+    <script src="{{url_for('static',filename='index.js')}}"></script>
   </body>
 </html>
