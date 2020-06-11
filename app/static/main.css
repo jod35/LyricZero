@@ -17,12 +17,13 @@ header {
   display: flex;
   color: dodgerblue;
   padding: 10px;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.308);
   justify-content: space-between;
   width: 100%;
   top: 0;
   left: 0;
   position: fixed;
+  z-index: 1;
   background-color: white;
 }
 .nav-item {
@@ -132,12 +133,31 @@ footer {
 }
 
 @media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
   header {
-    padding: 0;
-    box-shadow: none;
+    padding: 20;
+    display: flex;
+    justify-content: center;
+  }
+  .logo {
+    color: dodgerblue;
   }
   .nav-bar {
-    /* display: none; */
+    margin-top: 25px;
+    margin-right: 30px;
+    padding-left: 20px;
+  }
+  .nav-item {
+    padding: 5px;
+  }
+  .nav-bar-item {
+    padding: 10px;
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 5px;
   }
   .mobile-nav {
     display: inline;
@@ -148,6 +168,13 @@ footer {
     display: block;
   }
   .form {
-    margin-top: 200px;
+    margin-top: 100px;
+  }
+  .myfield {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  .mybtn {
+    padding: 10px;
   }
 }
