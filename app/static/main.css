@@ -140,6 +140,7 @@ footer {
     padding: 20;
     display: flex;
     justify-content: center;
+    top: 25px;
   }
   .logo {
     color: dodgerblue;
